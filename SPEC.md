@@ -17,7 +17,7 @@
 | Letter    | B, C, Ch, D, Dd, G, H, Kh, L, M, N, Ng, Nh, Ph, R, S, T, Th, Tr, V, X | Base sign |
 | Dot       | 0, 1, 2, 3, 4, 5, 6 | Placement on strokes |
 | Tone      | +1, +2, +3, +4, -1, -2, -3, -4 | Corner placement (1=top-left … 4=bottom-left) |
-| IDS       | `⿰, ⿱, ⿲, ⿳ | Ideographic sequences  
+| IDS       | ⿰, ⿱, ⿲, ⿳ | Ideographic sequences  
 
 ---
 
