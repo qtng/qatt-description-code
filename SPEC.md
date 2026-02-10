@@ -39,7 +39,7 @@
 | QATT-Code  | Description                                        | SVG |
 |------------|---------------------------------------------------|-----|
 | Tr1+8      | Base symbol Tr (廾) with dot at start of first stroke and half tone symbol at position 4 (bottom-left) | ꜀牛 |
-| Dd3 | Base symbol Dd (士) with dot at start of second stroke and full tone symbol at position 3 (bottom-right) | 壬。 |
+| Dd3+1 | Base symbol Dd (士) with dot at start of second stroke and full tone symbol at position 1 (top-left) | ⁰壬 |
 | ⿱ThDd-2 | Combined character consisting of unmarked Th on top of Dd with half tone symbol at position 2 (top-right) | 芏꜄ |
 
 ---
