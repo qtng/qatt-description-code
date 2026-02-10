@@ -51,4 +51,4 @@ Các ký tự phức hợp được biểu diễn bằng cách **kết hợp nhi
 Cú pháp đầy đủ, định nghĩa các thành phần và các quy tắc hình thức được trình bày trong [Tài liệu đặc tả đầy đủ QATT-DC](SPEC.md).
 
 # Lookup table - Bảng tra
-![QATT Lookup Table](qatt-lookup-table.png)
+![QATT Lookup Table](qatt-dc-2026-02.png)
