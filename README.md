@@ -39,8 +39,8 @@ Các ký tự phức hợp được biểu diễn bằng cách **kết hợp nhi
 
 **Ví dụ:**
 
-- `Dd3` → `壬ₒ`  
-  Ký hiệu cơ sở **Dd**, với dấu chấm đặt tại đầu nét thứ hai.
+- `Dd3+1` → `⁰壬`  
+  Ký hiệu cơ sở **Dd**, với dấu chấm đặt tại đầu nét thứ hai và một ký hiệu thanh điêu ở góc trên bên trái.
 
 - `Tr1+4` → `꜀牛`  
   Ký hiệu cơ sở **Tr**, với dấu chấm ở đầu nét thứ nhất và ký hiệu thanh điệu ở góc dưới bên trái.
