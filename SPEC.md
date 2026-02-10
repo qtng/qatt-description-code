@@ -38,8 +38,8 @@
 
 | QATT-Code  | Description                                        | SVG |
 |------------|---------------------------------------------------|-----|
-| Tr1+8      | Base symbol "Tr", dot at start of first stroke (2), half tone at the bottom-left (+8) | ꜆牛 |
-| ⿱ThDd-6 | Combined character consisting of unmarked Th on top of Dd-6 | 芏꜂ |
+| Tr1+8      | Base symbol Tr (廾) with dot at start of first stroke and half tone at position 4 (bottom-left) | ꜆牛 |
+| ⿱ThDd-2 | Combined character consisting of unmarked Th on top of Dd with half tone at position 2 (top-right) | 芏꜂ |
 
 ---
 
