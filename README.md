@@ -1,8 +1,8 @@
-## QATT Description Code (QATT-DC)
+## QATT Description Code
 
-This repository defines the **QATT Description Code (QATT-DC)**, a compact, formal notation for describing the **visual structure** of Quốc Âm Tân Tự characters.
+This repository defines the **QATT Description Code**, a compact, formal notation for describing the **visual structure** of Quốc Âm Tân Tự characters.
 
-Because Quốc Âm Tân Tự symbols are not currently encoded in Unicode, QATT-DC provides a standardized way to **reference, analyze, and discuss** these characters in technical and academic contexts.
+Because Quốc Âm Tân Tự symbols are not currently encoded in Unicode, QATT Description Code provides a standardized way to **reference, analyze, and discuss** these characters in technical and academic contexts.
 
 ### Basic concept
 
@@ -21,15 +21,15 @@ More complex characters can be expressed by **combining multiple QATT codes** us
 - `⿱ThDd-2` → `芏꜂`  
   A compound character formed by placing **Th** above **Dd**, with a tone marker at the top-right.
 
-The complete syntax, component definitions, and formal rules are described in the [Full QATT-DC Specification](SPEC.md).
+The complete syntax, component definitions, and formal rules are described in the [Full Specification](SPEC.md).
 
 ---
 
-## Mã mô tả QATT (QATT-DC)
+## Mã mô tả QATT
 
-Kho lưu trữ này định nghĩa **Mã mô tả QATT (QATT Description Code – QATT-DC)**, một hệ thống ký hiệu ngắn gọn và hình thức nhằm mô tả **cấu trúc trực quan** của các ký hiệu Quốc Âm Tân Tự.
+Kho lưu trữ này định nghĩa **Mã mô tả QATT**, một hệ thống ký hiệu ngắn gọn và hình thức nhằm mô tả **cấu trúc trực quan** của các ký hiệu Quốc Âm Tân Tự.
 
-Do các ký hiệu Quốc Âm Tân Tự hiện chưa được mã hóa trong Unicode, QATT-DC cung cấp một phương thức thống nhất để **dẫn chiếu, phân tích và thảo luận** các ký hiệu này trong các ngữ cảnh kỹ thuật và học thuật.
+Do các ký hiệu Quốc Âm Tân Tự hiện chưa được mã hóa trong Unicode, mã mô tả QATT cung cấp một phương thức thống nhất để **dẫn chiếu, phân tích và thảo luận** các ký hiệu này trong các ngữ cảnh kỹ thuật và học thuật.
 
 ### Khái niệm cơ bản
 
@@ -51,4 +51,4 @@ Các ký tự phức hợp được biểu diễn bằng cách **kết hợp nhi
 Cú pháp đầy đủ, định nghĩa các thành phần và các quy tắc hình thức được trình bày trong [Tài liệu đặc tả đầy đủ QATT-DC](SPEC.md).
 
 # Lookup table - Bảng tra
-![QATT Lookup Table](qatt-dc-2026-02.png)
+![QATT Lookup Table](qatt.png)
