@@ -12,14 +12,14 @@ More complex characters can be expressed by **combining multiple QATT codes** us
 
 **Examples:**
 
-- `Dd3` → `壬ₒ`  
-  Base symbol **Dd**, with a dot placed at the start of the second stroke.
+- `Dd3+1` → `⁰壬`  
+  Base symbol **Dd**, with a dot placed at the start of the second stroke and a full tine symbol in the top left corner.
 
 - `Tr1+4` → `꜆牛`  
-  Base symbol **Tr**, with a dot at the start of the first stroke and a tone marker in the bottom-left corner.
+  Base symbol **Tr**, with a dot at the start of the first stroke and a half tone marker in the bottom-left corner.
 
 - `⿱ThDd-2` → `芏꜂`  
-  A compound character formed by placing **Th** above **Dd**, with a tone marker at the top-right.
+  A compound character formed by placing **Th** above **Dd**, with a half tone marker at the top-right.
 
 The complete syntax, component definitions, and formal rules are described in the [Full Specification](SPEC.md).
 
