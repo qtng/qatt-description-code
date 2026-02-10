@@ -12,7 +12,7 @@ More complex characters can be expressed by **combining multiple QATT codes** us
 
 **Examples:**
 
-- `Dd3` → `壬。`  
+- `Dd3` → `壬ₒ`  
   Base symbol **Dd**, with a dot placed at the start of the second stroke.
 
 - `Tr1+4` → `꜆牛`  
@@ -39,13 +39,13 @@ Các ký tự phức hợp được biểu diễn bằng cách **kết hợp nhi
 
 **Ví dụ:**
 
-- `Dd3` → `壬。`  
+- `Dd3` → `壬ₒ`  
   Ký hiệu cơ sở **Dd**, với dấu chấm đặt tại đầu nét thứ hai.
 
-- `Tr1+4` → `꜆牛`  
+- `Tr1+4` → `꜀牛`  
   Ký hiệu cơ sở **Tr**, với dấu chấm ở đầu nét thứ nhất và ký hiệu thanh điệu ở góc dưới bên trái.
 
-- `⿱ThDd-2` → `芏꜂`  
+- `⿱ThDd-2` → `芏꜄`  
   Ký tự phức hợp gồm **Th** đặt phía trên **Dd**, với ký hiệu thanh điệu ở góc trên bên phải.
 
 Cú pháp đầy đủ, định nghĩa các thành phần và các quy tắc hình thức được trình bày trong [Tài liệu đặc tả đầy đủ QATT-DC](SPEC.md).
