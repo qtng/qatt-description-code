@@ -1,39 +1,53 @@
-# QATT Description Code  
-*Mã mô tả QATT*
+## QATT Description Code (QATT-DC)
 
-## Motivation
+This repository defines the **QATT Description Code (QATT-DC)**, a compact, formal notation for describing the **visual structure** of Quốc Âm Tân Tự characters.
 
-The **QATT Description Code (QATT-DC)** is a compact symbolic notation used to describe the **visual and structural form** of Quốc Âm Tân Tự signs.  
-Since these signs are not currently encoded in Unicode, QATT-DC provides a consistent and reproducible way to support discussion, analysis, and publication.
+Because Quốc Âm Tân Tự symbols are not currently encoded in Unicode, QATT-DC provides a standardized way to **reference, analyze, and discuss** these characters in technical and academic contexts.
 
-**Mã mô tả QATT (QATT Description Code)** là một hệ thống ký hiệu ngắn gọn dùng để mô tả **cấu trúc hình thức** của các ký hiệu *Quốc Âm Tân Tự*.  
-Do các ký hiệu này hiện chưa được mã hóa trong Unicode, QATT-DC cung cấp một phương tiện thống nhất để **thảo luận, phân tích và dẫn chiếu** trong các tài liệu học thuật và kỹ thuật.
+### Basic concept
 
-[Go to full specification](SPEC.md)
+A QATT code describes **how a character looks**, not what it means.  
+Each code consists of a **base symbol**, optionally followed by **dot markers** and **tone indicators** that specify their visual placement.  
+More complex characters can be expressed by **combining multiple QATT codes** using ideographic description sequences (IDS).
 
-## Scope
-- Describes **visual structure only**.  
-- Does **not define Unicode code points** or character identity.  
-- Supports scientific discussions and referencing.
+**Examples:**
 
-## QATT-DC Code
-- **Letter Symbol**: e.g. `B`, `C`, `Ch`, `D`, `Dd`
-- **Dot Marking**: `0` = no dot, `1–6` = dot added
-  - Number indicates placement on strokes:
-    - 1/2 → beginning/end of first stroke
-    - 3/4 → beginning/end of second stroke
-    - 5/6 → beginning/end of third stroke
-- **Tone Symbol**: `+1` to `+4` for whole tone symbol, `-1` to `-4` for half tone symbol  
-  - Number indicates placement: 1 = top-left, 2 = top-right, 3 = bottom-right, 4 = bottom-left
-- **IDS (Ideographic Description Sequence)**: Combine multiple QATT codes to represent complex characters, e.g. ⿱C1D6+4, ⿱G3H2-1
+- `Dd3` → `壬。`  
+  Base symbol **Dd**, with a dot placed at the start of the second stroke.
 
-**Example**:  
-- `Ch2-4` → Letter symbol `Ch`, dot at end of first stroke (2), half tone symbol placed in bottom left corner (-4).
-- `⿱B1Kh4+3` → Combined character consisting of `B1` on top of `Kh4+3`.
+- `Tr1+4` → `꜆牛`  
+  Base symbol **Tr**, with a dot at the start of the first stroke and a tone marker in the bottom-left corner.
 
-## Examples
-See [`examples/`](examples) for SVG renderings.
+- `⿱ThDd-2` → `芏꜂`  
+  A compound character formed by placing **Th** above **Dd**, with a tone marker at the top-right.
 
-## Usage
-- Markdown / Blog: QATT code as text, sign rendered as SVG  
-- Referenceable for scientific publications
+The complete syntax, component definitions, and formal rules are described in the  
+[QATT-DC Specification](spec.md).
+
+---
+
+## Mã mô tả QATT (QATT-DC)
+
+Kho lưu trữ này định nghĩa **Mã mô tả QATT (QATT Description Code – QATT-DC)**, một hệ thống ký hiệu ngắn gọn và hình thức nhằm mô tả **cấu trúc trực quan** của các ký hiệu Quốc Âm Tân Tự.
+
+Do các ký hiệu Quốc Âm Tân Tự hiện chưa được mã hóa trong Unicode, QATT-DC cung cấp một phương thức thống nhất để **dẫn chiếu, phân tích và thảo luận** các ký hiệu này trong các ngữ cảnh kỹ thuật và học thuật.
+
+### Khái niệm cơ bản
+
+Một mã QATT mô tả **hình thức biểu hiện của ký hiệu**, không mô tả ý nghĩa ngữ nghĩa.  
+Mỗi mã bao gồm một **ký hiệu cơ sở**, có thể kèm theo **dấu chấm** và **ký hiệu thanh điệu** để chỉ rõ vị trí hiển thị của chúng.  
+Các ký tự phức hợp được biểu diễn bằng cách **kết hợp nhiều mã QATT** thông qua các chuỗi mô tả chữ ý (IDS).
+
+**Ví dụ:**
+
+- `Dd3` → `壬。`  
+  Ký hiệu cơ sở **Dd**, với dấu chấm đặt tại đầu nét thứ hai.
+
+- `Tr1+4` → `꜆牛`  
+  Ký hiệu cơ sở **Tr**, với dấu chấm ở đầu nét thứ nhất và ký hiệu thanh điệu ở góc dưới bên trái.
+
+- `⿱ThDd-2` → `芏꜂`  
+  Ký tự phức hợp gồm **Th** đặt phía trên **Dd**, với ký hiệu thanh điệu ở góc trên bên phải.
+
+Cú pháp đầy đủ, định nghĩa các thành phần và các quy tắc hình thức được trình bày trong  
+[Tài liệu đặc tả QATT-DC](spec.md).
