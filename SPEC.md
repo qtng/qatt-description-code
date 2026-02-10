@@ -4,16 +4,17 @@
 
 ```text
 <QATT-Code> ::= <Letter><Dot><Tone>  
-<Letter>    ::= B | C | Ch | D | Dd | ... 
+<Letter>    ::= B | C | Ch | D | Dd | G | H | Kh | L | M | N | Ng | Nh | Ph | R | S | T | Th | Tr | V | X
 <Dot>       ::= 0 | 1 | 2 | 3 | 4 | 5 | 6
 <Tone>      ::= +1 | +2 | +3 | +4 | -1 | -2 | -3 | -4
-<IDS>       ::= ⿰<QATT-Code><QATT-Code> | ⿱<QATT-Code><QATT-Code> | ...
+<IDS>       ::= ⿰<QATT-Code><QATT-Code> | ⿱<QATT-Code><QATT-Code> | ⿲<QATT-Code><QATT-Code><QATT-Code> | ⿳<QATT-Code><QATT-Code><QATT-Code>
 ```
+
 ## 2. Components Overview (Table)
 
 | Component | Syntax / Options | Notes |
 |-----------|-----------------|-------|
-| Letter    | `B | C | Ch | D | Dd | G | H | Kh | L | M | N | Ng | Nh | Ph | R | S | T | Th | Tr | V | X` | Base sign |
+| Letter    | `B, C | Ch | D | Dd | G | H | Kh | L | M | N | Ng | Nh | Ph | R | S | T | Th | Tr | V | X` | Base sign |
 | Dot       | `0 | 1 | 2 | 3 | 4 | 5 | 6` | Placement on strokes |
 | Tone      | `+1 | +2 | +3 | +4 | -1 | -2 | -3 | -4` | Corner placement (1=top-left … 4=bottom-left) |
 | IDS       | `⿰<QATT-Code><QATT-Code> | ⿱<QATT-Code><QATT-Code> | ⿲<QATT-Code><QATT-Code><QATT-Code> | ⿳<QATT-Code><QATT-Code><QATT-Code>` | Ideographic sequences  
