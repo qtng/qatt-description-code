@@ -14,16 +14,16 @@
 
 | Component | Syntax / Options | Notes |
 |-----------|-----------------|-------|
-| Letter    | `B, C | Ch | D | Dd | G | H | Kh | L | M | N | Ng | Nh | Ph | R | S | T | Th | Tr | V | X` | Base sign |
-| Dot       | `0 | 1 | 2 | 3 | 4 | 5 | 6` | Placement on strokes |
-| Tone      | `+1 | +2 | +3 | +4 | -1 | -2 | -3 | -4` | Corner placement (1=top-left … 4=bottom-left) |
-| IDS       | `⿰<QATT-Code><QATT-Code> | ⿱<QATT-Code><QATT-Code> | ⿲<QATT-Code><QATT-Code><QATT-Code> | ⿳<QATT-Code><QATT-Code><QATT-Code>` | Ideographic sequences  
+| Letter    | B, C, Ch, D, Dd, G, H, Kh, L, M, N, Ng, Nh, Ph, R, S, T, Th, Tr, V, X | Base sign |
+| Dot       | 0, 1, 2, 3, 4, 5, 6 | Placement on strokes |
+| Tone      | +1, +2, +3, +4, -1, -2, -3, -4 | Corner placement (1=top-left … 4=bottom-left) |
+| IDS       | `⿰, ⿱, ⿲, ⿳ | Ideographic sequences  
 
 ---
 
 ## 2. Component Meaning
 
-1. **Letter** – Base sign from Quốc Âm Tân Tự  
+1. **Base Symbol** – Base symbol from Quốc Âm Tân Tự, the symbol name is case sensitive, i.e. first letter is uppercase and subsequent letters are lowercase.  
 2. **Dot Marking** – Optional dot, number indicates placement on strokes:
     - 1/2 → beginning/end of first stroke  
     - 3/4 → beginning/end of second stroke  
@@ -38,8 +38,8 @@
 
 | QATT-Code  | Description                                        | SVG |
 |------------|---------------------------------------------------|-----|
-| Ch2-4      | Letter Ch, dot at end of first stroke (2), half tone top-left (-4) | ![Ch2-4](examples/Ch2-4.svg) |
-| ⿱B1Kh4+3  | Combined character consisting of B1 on top of Kh4+3 | ![B1Kh4+3](examples/B1Kh4+3.svg) |
+| Tr1+8      | Base symbol "Tr", dot at start of first stroke (2), half tone at the bottom-left (+8) | ꜆牛 |
+| ⿱ThDd-6 | Combined character consisting of unmarked Th on top of Dd-6 | 芏꜂ |
 
 ---
 
