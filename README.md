@@ -1,8 +1,13 @@
-# QATT Description Code
+# QATT Description Code  
+*Mã mô tả QATT*
 
 ## Motivation
-The QATT Description Code (QATT-DC) is a compact notation to describe the structural form of Quốc Âm Tân Tự signs.  
-Since these signs are not in Unicode, QATT-DC provides a consistent way for discussion, analysis, and publication.
+
+The **QATT Description Code (QATT-DC)** is a compact symbolic notation used to describe the **visual and structural form** of Quốc Âm Tân Tự signs.  
+Since these signs are not currently encoded in Unicode, QATT-DC provides a consistent and reproducible way to support discussion, analysis, and publication.
+
+**Mã mô tả QATT (QATT Description Code)** là một hệ thống ký hiệu ngắn gọn dùng để mô tả **cấu trúc hình thức** của các ký hiệu *Quốc Âm Tân Tự*.  
+Do các ký hiệu này hiện chưa được mã hóa trong Unicode, QATT-DC cung cấp một phương tiện thống nhất để **thảo luận, phân tích và dẫn chiếu** trong các tài liệu học thuật và kỹ thuật.
 
 ## Scope
 - Describes **visual structure only**.  
