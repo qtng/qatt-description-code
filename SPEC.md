@@ -14,7 +14,7 @@
 
 | Component | Syntax / Options | Notes |
 |-----------|-----------------|-------|
-| Letter    | B, C, Ch, D, Dd, G, H, Kh, L, M, N, Ng, Nh, Ph, R, S, T, Th, Tr, V, X | Base sign |
+| Letter    | B, C, Ch, D, Dd, G, H, Kh, L, M, N, Ng, Nh, Ph, R, S, T, Th, Tr, V, X | Base sign (cán tự) |
 | Dot (phẩy) | 0, 1, 2, 3, 4, 5, 6 | Placement on strokes |
 | Tone (thanh điệu) | +1, +2, +3, +4, -1, -2, -3, -4 | plus sign for full tone symbol "ₒ", minus sign for half tone symbol "꜀", number designates corner placement (1=top-left … 4=bottom-left) |
 | IDS       | ⿰, ⿱, ⿲, ⿳ | Ideographic sequences  
@@ -23,12 +23,12 @@
 
 ## 2. Component Meaning
 
-1. **Base Symbol** – Base symbol from Quốc Âm Tân Tự, the symbol name is case sensitive, i.e. first letter is uppercase and subsequent letters are lowercase.  
-2. **Dot Marking** – Optional dot, number indicates placement on strokes:
+1. **Base Symbol** – Base symbol (cán tự) from Quốc Âm Tân Tự, the symbol name is case sensitive, i.e. first letter is uppercase and subsequent letters are lowercase.  
+2. **Dot Marking** – Optional dot (phẩy), number indicates placement on strokes:
     - 1/2 → beginning/end of first stroke  
     - 3/4 → beginning/end of second stroke  
     - 5/6 → beginning/end of third stroke  
-3. **Tone** – `°` = whole tone symbol, `꜄` = half tone symbol 
+3. **Tone** – `°` = whole tone symbol (thanh điêu dương), `꜄` = half tone symbol (thanh điêu âm)
     - Number indicates corner: 1 = top-left, 2 = top-right, 3 = bottom-right, 4 = bottom-left  
 4. **IDS** – Combines multiple QATT codes to represent complex characters
 
