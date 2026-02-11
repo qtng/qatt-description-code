@@ -34,19 +34,19 @@ Do các ký hiệu Quốc Âm Tân Tự hiện chưa được mã hóa trong Uni
 ### Khái niệm cơ bản
 
 Một mã QATT mô tả **hình thức biểu hiện của ký hiệu**, không mô tả ý nghĩa ngữ nghĩa.  
-Mỗi mã bao gồm một **ký hiệu cơ sở**, có thể kèm theo **dấu chấm** và **ký hiệu thanh điệu** để chỉ rõ vị trí hiển thị của chúng.  
+Mỗi mã bao gồm một **ký hiệu cơ sở**, có thể kèm theo **dấu phẩy** và **thanh điệu** để chỉ rõ vị trí hiển thị của chúng.  
 Các ký tự phức hợp được biểu diễn bằng cách **kết hợp nhiều mã QATT** thông qua các chuỗi mô tả chữ ý (IDS).
 
 **Ví dụ:**
 
 - `Dd3+1` → `⁰壬`  
-  Ký hiệu cơ sở **Dd**, với dấu chấm đặt tại đầu nét thứ hai và một ký hiệu thanh điêu ở góc trên bên trái.
+  Ký hiệu cơ sở **Dd**, với dấu phẩy đặt tại đầu nét thứ hai với thanh điêu ở góc trên bên trái.
 
 - `Tr1+4` → `꜀牛`  
-  Ký hiệu cơ sở **Tr**, với dấu chấm ở đầu nét thứ nhất và ký hiệu thanh điệu ở góc dưới bên trái.
+  Ký hiệu cơ sở **Tr**, với dấu phẩy ở đầu nét thứ nhất với thanh điệu ở góc dưới bên trái.
 
 - `⿱ThDd-2` → `芏꜄`  
-  Ký tự phức hợp gồm **Th** đặt phía trên **Dd**, với ký hiệu thanh điệu ở góc trên bên phải.
+  Ký tự phức hợp gồm **Th** đặt phía trên **Dd**, với thanh điệu ở góc trên bên phải.
 
 Cú pháp đầy đủ, định nghĩa các thành phần và các quy tắc hình thức được trình bày trong [Tài liệu đặc tả đầy đủ QATT-DC](SPEC.md).
 
