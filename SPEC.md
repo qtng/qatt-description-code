@@ -28,7 +28,7 @@
     - 1/2 → beginning/end of first stroke  
     - 3/4 → beginning/end of second stroke  
     - 5/6 → beginning/end of third stroke  
-3. **Tone** – `°` = whole tone symbol (thanh điêu dương), `꜄` = half tone symbol (thanh điêu âm)
+3. **Tone** – `°` = whole tone symbol (thanh điệu dương), `꜄` = half tone symbol (thanh điệu âm)
     - Number indicates corner: 1 = top-left, 2 = top-right, 3 = bottom-right, 4 = bottom-left  
 4. **IDS** – Combines multiple QATT codes to represent complex characters
 
