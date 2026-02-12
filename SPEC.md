@@ -15,7 +15,7 @@
 | Component | Syntax / Options | Notes |
 |-----------|-----------------|-------|
 | Letter    | B, C, Ch, D, Dd, G, H, Kh, L, M, N, Ng, Nh, Ph, R, S, T, Th, Tr, V, X | Base sign (cán tự) |
-| Dot (in QATT order) | 0, 1, 2, 3, 4, 4, 6 | Placement of dot |
+| Dot (in QATT order) | 0, 1, 2, 3, 4, 4, 6 | Placement of dot in QATT order |
 | Dot (in stroke oder) | •0, •1, •2, •3, •4, •5, •6 | Placement on strokes |
 | Tone (thanh điệu) | +1, +2, +3, +4, -1, -2, -3, -4 | plus sign for full tone symbol "ₒ", minus sign for half tone symbol "꜀", number designates corner placement (1=top-left … 4=bottom-left) |
 | IDS       | ⿰, ⿱, ⿲, ⿳ | Ideographic sequences  
