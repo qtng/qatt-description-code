@@ -535,8 +535,9 @@ function writeQATT(root, codes, opts) {
         if (tone != null && tone != "") marks.overlay(tone, {
             connect: chars[0]
         })
-      }
-    )
+      })
+  }
+
   window.addEventListener("load",
     document.querySelectorAll(".qatt").forEach((el)=>{
         const t = el.innerText
