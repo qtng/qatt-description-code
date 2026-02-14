@@ -520,8 +520,8 @@ function writeQATT(root, codes, opts) {
           [code.toUpperCase()],
           {
               root: root,
+              ...opts,
               size: opts.size || (s[0] == "." ? 32 : 36),
-              xselector: "qatt",
               ondisplay: (anim, attrs)=>{
                   if (dot) {
                     const seg = parseInt((dot-1) / 2)
