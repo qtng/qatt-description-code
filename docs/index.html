@@ -300,11 +300,9 @@
         }
       })
       if (document.getElementById("cursive").checked) {
-        let out = "";
-        for (const ch of output) {
-          out += this.cursive[ch] || ch;
-        }
-        output = out;
+        Object.keys(this.cursive).forEach((k) => {
+          output = output.replaceAll(k, this.cursive[k])
+        })
       }
       if (document.getElementById("brackets").checked) {
         output = output.replaceAll("】 【", "】【")
