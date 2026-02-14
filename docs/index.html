@@ -41,6 +41,10 @@
           <input checked id="brackets" type="checkbox">
           brackets
         </label>
+        <label>
+          <input id="markneutral" type="checkbox">
+          mark neutral tone
+        </label>
       </div>
     </div>
 
@@ -139,7 +143,7 @@
         "\u0323": "nặng"
       };
     
-      let tone = "ngang";
+      let tone = document.getElementById("markneutral").checked ? "ngang" : "";
       let nfd = word.normalize("NFD").replace(
         /[\u0300\u0301\u0303\u0309\u0323]/g,
         m => (tone = toneMap[m], "")
