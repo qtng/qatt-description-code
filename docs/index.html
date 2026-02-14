@@ -1,1 +1,320 @@
-QATT
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QATT Writer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>QATT Writer</h1>
+    <p>
+      Viết Quốc Âm Tân Tự theo chính tả hạt nhân.
+    </p>
+    
+    <p class="text-muted small">This tool displays QATT using
+      substitute characters, as QATT is not
+      an internationally recognized Unicode standard.
+      The conversion follows the "nucleus orthography",
+      i.e. the rendering splits rhymes into nucleus+coda.
+      That is because there aren't enough
+      good fitting substitute characters for all 110
+      rhymes defined by the historic rhyme orthography.
+      <br><br>
+      The “cursive” option provides a more flowing appearance,
+      while non-cursive stays closer to the historic forms.
+    </p>
+    
+    
+    <div class="d-flex flex-md-column align-items-stretch" style="min-height:50vh">
+      <div class="me-2 m-md-0 alert alert-secondary m-0" id="output" style="flex-basis:60%; text-wrap: balance"></div>
+      <div class="d-flex flex-column" style="flex-basis:40%">
+        <textarea class="flex-grow-1 form-control mb-2" id="writer" placeholder="bắt đầu viết ở đây..."></textarea>
+        <label>
+          <input checked id="cursive" type="checkbox">
+          cursive forms
+        </label>
+        <label>
+          <input checked id="brackets" type="checkbox">
+          brackets
+        </label>
+      </div>
+    </div>
+  </div>
+  <script>
+  (()=>{
+    function Writer(root, output) {
+      this.chars = {
+        "?": "≡",
+        "b": "ⴴ",
+        "c": "⫤",
+        "ch": "キ",
+        "d": "҂",
+        "đ": "土",
+        "dd": "đ",
+        "g": "|=",
+        "gi": "҂",
+        "h": "⫫",
+        "j": "gi",
+        "kh": "凵",
+        "l": "川",
+        "m": "又",
+        "n": "|ⵜ",
+        "ng": "π",
+        "nh": "久",
+        "ph": "×|",
+        "qu": "c",
+        "r": "ɴ",
+        "s": "и",
+        "t": "ⵜ|",
+        "th": "卄",
+        "tr": "干",
+        "v": "ǀ×",
+        "x": "ᴢ",
+        
+        "a": "h",
+        "ă": "H",
+        "ơ": "r",
+        "â": "R",
+        "ê": "nh",
+        "e": "NH",
+        "i": "gi",
+        "ia": "GI",
+        "ô": "ph",
+        "o": "PH",
+        "u": "v",
+        "ua": "V",
+        "ư": "g",
+        "ưa": "G",
+        "ngang": "<꜀",
+        "sắc": "꜄",
+        "huyền": "<ₒ",
+        "hỏi": "<꜂",
+        "ngã": "<°",
+        "nặng": "°",
+      }
+      this.cursive = {}
+      this.cursive[this.chars.d] = "亽"
+      this.cursive[this.chars.r] = "冂"
+      this.cursive[this.chars.s] = "凵"
+      this.cursive[this.chars.ph] = "⊣"
+      this.cursive[this.chars.v] = "卜"
+      this.cursive[this.chars.g] = "に"
+      this.cursive[this.chars.ng] = "丌"
+      this.cursive[this.chars.m] = "ㄡ"
+      
+      this.root = root
+      this.output = output
+      root.addEventListener("input", this.handleInput.bind(this))
+      document.getElementById("cursive").addEventListener("click", this.handleInput.bind(this))
+      document.getElementById("brackets").addEventListener("click", this.handleInput.bind(this))
+    }
+    
+    Writer.prototype.parseWord = function(word) {
+      word = word.toLowerCase().trim();
+    
+      // Extract tones
+      const toneMap = {
+        "\u0301": "sắc",
+        "\u0300": "huyền",
+        "\u0309": "hỏi",
+        "\u0303": "ngã",
+        "\u0323": "nặng"
+      };
+    
+      let tone = "ngang";
+      let nfd = word.normalize("NFD").replace(
+        /[\u0300\u0301\u0303\u0309\u0323]/g,
+        m => (tone = toneMap[m], "")
+      );
+      let base = nfd.normalize("NFC");
+    
+      // Onsets
+      const onsets = [
+        "ngh","ng","gh","ph","th","tr","ch","nh","kh",
+        "gi","qu","b","c","d","đ","g","h","k","l","m",
+        "n","p","r","s","t","v","x","q"
+      ];
+    
+      let onset = "?";
+      for (const o of onsets) {
+        if (base.startsWith(o)) {
+          onset = o;
+          base = base.slice(o.length);
+          break;
+        }
+      }
+      
+      // remove h in ngh and gh
+      if (onset == "gh") onset = "g"
+      if (onset == "ngh") onset = "ng"
+      if (onset == "q") onset = "qu"
+    
+      // Codas
+      const codas = ["ng","nh","ch","m","n","p","t","c"];
+      let coda = "";
+      for (const c of codas) {
+        if (base.endsWith(c)) {
+          coda = c;
+          base = base.slice(0, -c.length);
+          break;
+        }
+      }
+    
+      // Nucleus
+      let medial = "";
+      let offglide = "";
+      let vowel = base;
+    
+      if(onset == "qu") {
+          medial = "o"
+      }
+      
+      // --- find medial ---
+      if (vowel.length >= 2) {
+        const first = vowel[0];
+        const second = vowel[1];
+        
+        // u-rules
+        if (first === "u") {
+          if ("âêyơ".indexOf(second) > -1) {
+            medial = "u";
+            vowel = vowel.slice(1);
+          }
+        }
+    
+        // o-rules
+        else if (first === "o" && (second === "a" || second === "e")) {
+          medial = "o";
+          vowel = vowel.slice(1);
+        }
+      }
+          
+      // --- Offglide (i/y/o/u at end) ---
+      if (vowel.length > 1 && /[iyou]$/.test(vowel)) {
+        offglide = vowel.slice(-1);
+        vowel = vowel.slice(0, -1);
+        
+        // ai/ay/ao/au distinction
+        if (vowel == "a" && (offglide == "y" || offglide == "u")) {
+          vowel = "ă"
+        }
+        
+        // i/y and u/o to same representation
+        if (offglide == "y") {
+          offglide = "i"
+        } else if (offglide == "o") {
+          offglide = "u"
+        }
+      }
+      
+      // gi has a default vowel
+      if (onset == "gi" && vowel == "") vowel = "i"
+    
+      
+      if (vowel == "iê") vowel = "ia"
+      else if (vowel == "yê") vowel = "ia"
+      else if (vowel == "ya") vowel = "ia"
+      else if (vowel == "y") vowel = "i"
+      else if (vowel == "uô") vowel = "ua"
+      else if (vowel == "ươ") vowel = "ưa"
+
+      return {
+        onset,
+        medial,
+        vowel,
+        offglide,
+        coda,
+        tone
+      };
+    }
+    
+    Writer.prototype.parseSentence = function(sentence) {
+      const result = [];
+      const regex = /\p{L}+|\P{L}+/gu; // Words OR non-words
+      const tokens = sentence.normalize("NFC").match(regex) || [];
+    
+      for (const token of tokens) {
+        if (/^\p{L}+$/u.test(token)) {
+          // Word → syllabic analysis
+          const parsed = this.parseWord(token);
+          result.push({
+            word: token,
+            onset: parsed.onset || "",
+            medial: parsed.medial || "",
+            vowel: parsed.vowel,
+            offglide: parsed.offglide || "",
+            coda: parsed.coda || "",
+            tone: parsed.tone
+          });
+        } else {
+          // Characters in between → unchanged
+          result.push({ word: token });
+        }
+      }
+    
+      return result;
+    }
+    
+    Writer.prototype.translate = function(text){
+      const tokens = this.parseSentence(text)
+      let output = ""
+      tokens.forEach((t) => {
+        if (t.vowel) {
+          const head = this.chars[t.onset] || t.onset
+          const medial = t.medial ? this.chars["u"] : ""
+          const vowelTmp = this.chars[t.vowel] || t.vowel
+          let vowel = this.chars[vowelTmp.toLowerCase()] || vowelTmp
+          if (vowelTmp == vowelTmp.toUpperCase()) {
+            vowel += "."
+          }
+          const offglide = this.chars[t.offglide] || t.offglide || ""
+          const coda = this.chars[t.coda] || t.coda
+          const tone = this.chars[t.tone] || t.tone
+          console.log(JSON.stringify(t))
+          let parts = [head, medial, vowel, offglide, coda]
+          let qatt = ""
+          parts.forEach((p, i) => {
+            qatt += this.chars[p] || p
+          })
+          if (!qatt.match(/\w/)) {
+            if (tone[0] == "<") qatt = tone.slice(1) + qatt
+            else qatt += tone
+            output += `【${qatt}】`
+          } else {
+            output += t.word
+          }
+        } else {
+          output += t.word
+        }
+      })
+      if (document.getElementById("cursive").checked) {
+        let out = "";
+        for (const ch of output) {
+          out += this.cursive[ch] || ch;
+        }
+        output = out;
+      }
+      if (document.getElementById("brackets").checked) {
+        output = output.replaceAll("】 【", "】【")
+      } else {
+        output = output.replaceAll("】 【", "\u3000")
+        output = output.replace(/[】【]/g, "")
+      }
+      return output
+    }
+    Writer.prototype.handleInput = function(){
+      const text = this.root.value
+      this.output.innerText = this.translate(text)
+    }
+    window.Writer = Writer
+  })()
+  const writer = new Writer(
+    document.getElementById("writer"),
+    document.getElementById("output"),
+  )
+  </script>
+</body>
+</html>
