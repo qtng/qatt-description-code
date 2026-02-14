@@ -538,13 +538,14 @@ function writeQATT(root, codes, opts) {
       })
   }
 
-  window.addEventListener("load",
-    document.querySelectorAll(".qatt").forEach((el)=>{
+  window.addEventListener(
+    "load",
+    ()=>{
+      document.querySelectorAll(".qatt").forEach((el)=>{
         const t = el.innerText
         el.innerHTML = ""
         let opts = JSON.parse(el.dataset.opts || "{}")
         writeQATT(el, t, {size: Number(el.dataset.size || 24), ...opts})
-    })
+      })
+    }
   );
-  
-}
