@@ -199,6 +199,7 @@
     
       if(onset == "qu") {
           medial = "o"
+          if (vowel == "ô") vowel = "â"
       }
       
       // --- find medial ---
@@ -219,9 +220,6 @@
           medial = "o";
           vowel = vowel.slice(1);
         }
-
-        // quô to â
-        else if (medial && first == "ô") vowel = "â" + second
       }
           
       // --- Offglide (i/y/o/u at end) ---
