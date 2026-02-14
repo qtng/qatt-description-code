@@ -537,13 +537,13 @@ function writeQATT(root, codes, opts) {
         })
       }
     )
-
-  document.querySelectorAll(".qatt").forEach((el)=>{
+  window.addEventListener("load",
+    document.querySelectorAll(".qatt").forEach((el)=>{
         const t = el.innerText
         el.innerHTML = ""
         let opts = JSON.parse(el.dataset.opts || "{}")
-        write(el, t, {size: Number(el.dataset.size || 24), ...opts})
+        writeQATT(el, t, {size: Number(el.dataset.size || 24), ...opts})
     })
-
+  );
   
 }
