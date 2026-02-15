@@ -30,9 +30,9 @@
     
     
     <div class="d-flex flex-md-column align-items-stretch" style="min-height:50vh">
-      <div class="me-2 m-md-0 alert alert-secondary m-0 p-2" style="flex-basis:60%; text-wrap: balance; font-size:.95rem">
+      <div class="position-relative me-2 m-md-0 alert alert-secondary m-0 p-2" style="flex-basis:60%; text-wrap: balance; font-size:.95rem">
         <div id="output"></div>
-        <button class="btn btn-sm btn-outline-primary position-absolute bottom-0 end-0 m-2" onclick="navigator.clipboard.writeText(document.getElementById('parent').firstElementChild.innerText)">
+        <button class="btn btn-sm btn-outline-primary position-absolute top-0 end-0 m-2" onclick="navigator.clipboard.writeText(document.getElementById('output').innerText)">
           Copy
         </button>
       </div>
