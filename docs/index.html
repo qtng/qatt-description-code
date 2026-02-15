@@ -151,11 +151,11 @@
       })
       document.querySelectorAll("#simplified, #simplified2").forEach((el)=>{
         el.addEventListener("click", (el) => {
-          const checked = el.checked;
+          const checked = !el.checked;
           document.getElementById("simplified").checked = checked;
           document.getElementById("simplified2").checked = checked;
           document.getElementById("reference").src = "qatt-" + (checked?"simplified":"traditional") + ".jpg";
-          this.handleInput.bind(this);
+          this.handleInput();
         })
       })
     }
