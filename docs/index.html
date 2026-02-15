@@ -34,16 +34,20 @@
       <div class="d-flex flex-column" style="flex-basis:40%">
         <textarea class="flex-grow-1 form-control mb-2 p-2" id="writer" style="min-height:10em; font-size:.95rem" placeholder="bắt đầu viết ở đây..."></textarea>
         <label>
-          <input checked id="cursive" type="checkbox">
+          <input id="cursive" type="checkbox">
           cursive forms
         </label>
         <label>
-          <input checked id="brackets" type="checkbox">
+          <input id="brackets" type="checkbox">
           brackets
         </label>
         <label>
           <input id="markneutral" type="checkbox">
           mark neutral tone
+        </label>
+        <label>
+          <input id="mergemedials" type="checkbox">
+          merge medials
         </label>
       </div>
     </div>
@@ -295,7 +299,7 @@
         if (t.vowel) {
           const head = this.chars[t.onset] || t.onset
           let medial = t.medial ? this.chars["u"] : ""
-          if (medial && this.chars["w" + t.vowel]) {
+          if (medial && this.chars["w" + t.vowel] && document.getElementById("mergemedials").checked) {
             t.vowel = "w" + t.vowel
             medial = ""
           }
