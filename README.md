@@ -13,10 +13,10 @@ More complex characters can be expressed by **combining multiple QATT codes** us
 **Examples:**
 
 - `Dd5+1` → `⁰壬`  
-  Base symbol **Dd**, with a dot placed at the start of the vertical **support stroke** and a full tine symbol in the top left corner.
+  Base symbol **Dd**, with a dot placed at the start of the vertical **main stroke** and a full tine symbol in the top left corner.
 
 - `Ch1-4` → `꜆牛`  
-  Base symbol **Ch**, with a dot at the top left of the parallel stroke rectangle and a half tone marker in the bottom-left corner.
+  Base symbol **Ch**, with a dot on the top left of the **support rectangle** and a half tone marker in the bottom-left corner.
 
 - `⿱ThDd-2` → `芏꜂`  
   A compound character formed by placing **Th** above **Dd**, with a half tone marker at the top-right.
@@ -40,13 +40,13 @@ Các ký tự phức hợp được biểu diễn bằng cách **kết hợp nhi
 **Ví dụ:**
 
 - `Dd5+1` → `⁰壬`  
-  Cán tự **Dd**, với dấu phẩy đặt tại đầu nét phụ với thanh điêu dương ở góc trên bên trái.
+  Cán tự **Dd**, với dấu phẩy đặt tại đầu **nét chính** với thanh điêu dương ở góc trên bên trái.
 
 - `Ch1-4` → `꜀牛`  
-  Cán tự **Ch**, với dấu phẩy ở trên bên trái của hai nét đôi với thanh điệu dương ở góc dưới bên trái.
+  Cán tự **Ch**, với dấu phẩy ở trên bên trái của hình chữ nhật của **nét phụ** với thanh điệu dương ở góc dưới bên trái.
 
 - `⿱ThDd-2` → `芏꜄`  
-  Ký tự phức hợp gồm **Th** đặt phía trên **Dd**, với thanh điệu âm ở góc trên bên phải.
+  Chữ phức hợp gồm **Th** đặt phía trên **Dd**, với thanh điệu âm ở góc trên bên phải.
 
 Cú pháp đầy đủ, định nghĩa các thành phần và các quy tắc hình thức được trình bày trong [Tài liệu đặc tả đầy đủ QATT-DC](SPEC.md).
 
