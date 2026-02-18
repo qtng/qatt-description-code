@@ -317,7 +317,6 @@
       tokens.forEach((t) => {
         if (t.vowel) {
           let head = this.chars[t.onset] || t.onset
-          if (head) head = "'" + head
           let medial = t.medial ? this.chars["u"] : ""
           if (medial && this.chars["w" + t.vowel] && document.getElementById("mergemedials").checked) {
             t.vowel = "w" + t.vowel
@@ -337,6 +336,7 @@
           parts.forEach((p, i) => {
             qatt += this.chars[p] || p
           })
+          if (head) qatt = "'" + qatt
           if (!qatt.match(/\w/)) {
             if (tone[0] == "<") qatt = tone.slice(1) + qatt
             else qatt += tone
